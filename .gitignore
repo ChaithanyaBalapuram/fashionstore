@@ -1,0 +1,16 @@
+target/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+*.war
+*.class
+
+# Local database config (use db.properties.example as template)
+src/main/resources/db.properties
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
