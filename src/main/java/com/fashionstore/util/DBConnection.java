@@ -20,7 +20,7 @@ public class DBConnection {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        URL = props.getProperty("db.url", "jdbc:mysql://localhost:3306/fashionstore");
+        URL = props.getProperty("db.url", "jdbc:mysql://thomas.proxy.rlwy.net:28734/railway?useSSL=false&allowPublicKeyRetrieval=true");
         USERNAME = props.getProperty("db.username", "root");
         PASSWORD = props.getProperty("db.password", "root");
     }
