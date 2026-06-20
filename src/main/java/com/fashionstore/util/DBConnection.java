@@ -7,9 +7,9 @@ import java.util.Properties;
 
 public class DBConnection {
 
-    private static final String URL;
-    private static final String USERNAME;
-    private static final String PASSWORD;
+	private static final String URL = System.getenv("DB_URL");
+	private static final String USERNAME = System.getenv("DB_USER");
+	private static final String PASSWORD = System.getenv("DB_PASSWORD");
 
     static {
         Properties props = new Properties();
@@ -20,9 +20,7 @@ public class DBConnection {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        URL = props.getProperty("db.url", "DB_URL");
-        USERNAME = props.getProperty("db.username", "DB_USER");
-        PASSWORD = props.getProperty("db.password", "DB_PASSWORD");
+       
     }
 
     public static Connection getConnection() {
