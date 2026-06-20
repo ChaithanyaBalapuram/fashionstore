@@ -20,9 +20,9 @@ public class DBConnection {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        URL = props.getProperty("db.url", "jdbc:mysql://thomas.proxy.rlwy.net:28734/railway?useSSL=false&allowPublicKeyRetrieval=true");
-        USERNAME = props.getProperty("db.username", "root");
-        PASSWORD = props.getProperty("db.password", "root");
+        URL = props.getProperty("db.url", "DB_URL");
+        USERNAME = props.getProperty("db.username", "DB_USER");
+        PASSWORD = props.getProperty("db.password", "DB_PASSWORD");
     }
 
     public static Connection getConnection() {
