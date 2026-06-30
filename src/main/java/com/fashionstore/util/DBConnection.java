@@ -21,6 +21,9 @@ public class DBConnection {
             System.out.println("Username: " + USERNAME);
 
             Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+            
+            System.out.println("Password exists: " + (PASSWORD != null));
+            System.out.println("Password length: " + (PASSWORD == null ? 0 : PASSWORD.length()));
 
             System.out.println("Database Connected Successfully!");
 
